@@ -194,7 +194,7 @@ function seedList(){const n=Date.now(),out=[];
 .forEach((r,k)=>out.push({id:'s'+k,name:r[0],emoji:r[1],cat:r[2],unit:r[3],stock:r[4],full:Math.max(r[4],r[7]),wk:r[5],price:r[6],buy:r[7],last:n-r[8]*D,log:[{k:'b',t:n-r[8]*D,q:r[7],p:r[6]}]}));return out}
 let pend=0;
 /* ===== เชื่อมต่อ Apps Script + ระบบ login ===== */
-const API_URL='PASTE_APPS_SCRIPT_EXEC_URL_HERE'; // วาง URL ของ Web app (ลงท้าย /exec) ตรงนี้
+const API_URL='https://script.google.com/macros/s/AKfycbycbOTDh8xgy9rLnQ9CMvWfLfT40dOoztinej5osOAAT9ipvpSP2S0_ofeW-6fchgozTw/exec'; // วาง URL ของ Web app (ลงท้าย /exec) ตรงนี้
 const TK='hi_token',CK='hi_cache';
 const ls={get:k=>{try{return localStorage.getItem(k)||''}catch(e){return ''}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}},del:k=>{try{localStorage.removeItem(k)}catch(e){}}};
 const tok=()=>ls.get(TK);
